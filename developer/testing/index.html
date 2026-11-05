@@ -1361,6 +1361,13 @@ See <a href="../../getting_started/installation/#using-uv-from-a-conda-shell">en
 <h2 id="to-run-all-tests">To run all tests</h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>run<span class="w"> </span>pytest
 </span></code></pre></div>
+<p>Tests run in parallel by default (<code>-n auto</code>, using pytest-xdist). Add <code>-n 0</code> to run
+them serially, which starts faster for a single test and is needed to see <code>-s</code>
+output or use <code>--pdb</code>.</p>
+<p>Tests wait for a condition (<code>qtbot.waitUntil</code>, <code>waitSignal</code>, <code>waitExposed</code>, ...)
+instead of sleeping for a fixed time, and pass <code>timeout=WAIT_TIMEOUT_MS</code> (from
+<code>tests/wait_timeout.py</code>). It is 5 s by default, so a hanging test fails quickly;
+CI uses <code>--wait-timeout=30</code> (seconds) for its slower runners.</p>
 <h2 id="to-run-a-specific-subset-of-tests">To run a specific subset of tests</h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>run<span class="w"> </span>pytest<span class="w"> </span>tests/test_gui.py
 </span></code></pre></div>
