@@ -333,10 +333,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#option-1-repository-installation-with-uv" class="md-nav__link">
+  <a href="#create-an-environment" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Option 1: Repository installation with uv
+        Create an environment
       </span>
     </span>
   </a>
@@ -344,38 +344,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-2-conda" class="md-nav__link">
+  <a href="#install-neuroseq" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Option 2: Conda
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Option 2: Conda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-neuroseq-into-conda" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Install NeuroSeq into Conda
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-uv-from-a-conda-shell" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Using uv from a Conda shell
+        Install NeuroSeq
       </span>
     </span>
   </a>
@@ -1121,6 +1093,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../developer/releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Making a release
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../developer/miscellaneous/" class="md-nav__link">
         
   
@@ -1258,10 +1257,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#option-1-repository-installation-with-uv" class="md-nav__link">
+  <a href="#create-an-environment" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Option 1: Repository installation with uv
+        Create an environment
       </span>
     </span>
   </a>
@@ -1269,38 +1268,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-2-conda" class="md-nav__link">
+  <a href="#install-neuroseq" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Option 2: Conda
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Option 2: Conda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-neuroseq-into-conda" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Install NeuroSeq into Conda
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-uv-from-a-conda-shell" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Using uv from a Conda shell
+        Install NeuroSeq
       </span>
     </span>
   </a>
@@ -1350,101 +1321,34 @@
 
 
 <h1 id="installation">Installation</h1>
-<p>NeuroSeq requires Python 3.12 or newer. Choose one of the following workflows
-and use the same environment for launching, testing, and troubleshooting.</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Environment</th>
-<th>Requires Conda?</th>
-<th>Launch command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>uv</td>
-<td>Project <code>.venv</code>, managed by uv</td>
-<td>No</td>
-<td><code>uv run neuroseq</code></td>
-</tr>
-<tr>
-<td>Conda with pip</td>
-<td>Named Conda environment</td>
-<td>Yes</td>
-<td><code>neuroseq</code> after activation</td>
-</tr>
-</tbody>
-</table>
-<h2 id="option-1-repository-installation-with-uv">Option 1: Repository installation with uv</h2>
-<p>uv works independently of Conda and can download a suitable Python interpreter
-when needed. You do not need to create or activate a Conda environment for
-this option.</p>
-<p>Install <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>, then run:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:neuroseq/neuroseq.git
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>neuroseq
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>uv<span class="w"> </span>sync
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>uv<span class="w"> </span>run<span class="w"> </span>neuroseq
+<p>NeuroSeq requires Python 3.12 or newer. Install the latest release from
+<a href="https://pypi.org/project/neuroseq/">PyPI</a> with pip into its own environment,
+so that its dependencies do not interfere with other Python software.</p>
+<h2 id="create-an-environment">Create an environment</h2>
+<p>With Python's built-in <code>venv</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>neuroseq-env
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>neuroseq-env/bin/activate<span class="w">     </span><span class="c1"># Linux / macOS</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>neuroseq-env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate<span class="w">        </span><span class="c1"># Windows</span>
 </span></code></pre></div>
-<p>GitHub SSH access is required for this clone URL. <code>uv sync</code> creates a project
-environment in <code>.venv</code> and installs dependencies using <code>pyproject.toml</code> and
-<code>uv.lock</code>. <code>uv run</code> checks that environment before launching a command.
-No manual activation of <code>.venv</code> is needed. See
-<a href="https://docs.astral.sh/uv/guides/projects/">uv's project workflow</a>.</p>
-<p>After pulling repository updates, run <code>uv sync</code> again. To deliberately resolve
-newer dependency versions, use <code>uv lock --upgrade</code> followed by <code>uv sync</code> and
-test the result; this changes <code>uv.lock</code>.</p>
-<h2 id="option-2-conda">Option 2: Conda</h2>
-<p>Conda is an alternative to the project <code>.venv</code>. Install
-<a href="https://www.anaconda.com/">Anaconda</a> if needed.</p>
-<p>Once Anaconda installed, create and activate a new environment in a command line:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda create -n neuroseq python=3.12
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>conda activate neuroseq
+<p>Or with <a href="https://www.anaconda.com/">Conda</a>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>neuroseq<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>neuroseq
 </span></code></pre></div>
-<p>Alternatively, the new enviroment can be created within Anaconda Navigator. For this, open Anaconda Navigator and go to "Enviroments". Click "Create" button, write "neuroseq" as a name and select Python 3.12.</p>
-<h3 id="install-neuroseq-into-conda">Install NeuroSeq into Conda</h3>
-<p>NeuroSeq requires Python 3.12 or newer.</p>
-<p>If you have ssh authentication to GitHub set up you can install directly from this repository with pip:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>git+ssh://git@github.com/neuroseq/neuroseq
+<p>The Conda environment can also be created in Anaconda Navigator: go to
+"Environments", click "Create", enter "neuroseq" as the name and select
+Python 3.12.</p>
+<h2 id="install-neuroseq">Install NeuroSeq</h2>
+<p>In the activated environment, run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>neuroseq
 </span></code></pre></div>
-<p>Alternatively you can clone the repository and then install it:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:neuroseq/neuroseq.git
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>neuroseq
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>pip<span class="w"> </span>install<span class="w"> </span>.
+<p>Then launch the GUI with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>neuroseq
 </span></code></pre></div>
-<p>Run <code>neuroseq</code> from the activated Conda environment. Prefer
-<code>python -m pip install .</code> to explicitly install into its Python. To update
-the installation after pulling changes, run <code>python -m pip install --upgrade .</code>.
-Use <code>python -m pip check</code> to check dependency metadata.</p>
-<p>Pip does not use <code>uv.lock</code> or <code>[tool.uv.sources]</code>, so this installation can have
-different package versions and PyTorch builds from the uv workflow. For GPU
-setup, see <a href="../../common_issues/#imaging-segmentation">GPU troubleshooting</a>.</p>
-<h2 id="using-uv-from-a-conda-shell">Using uv from a Conda shell</h2>
-<p>Combining uv and Conda is optional, not a third required setup step. You may
-install uv in an activated Conda environment:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>neuroseq
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>uv
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>uv<span class="w"> </span>sync
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>uv<span class="w"> </span>run<span class="w"> </span>neuroseq
-</span></code></pre></div>
-<p>With the default project configuration, <code>uv run</code> uses the repository's <code>.venv</code>,
-even when Conda is active. Conda supplies the shell/tool installation; the
-application dependencies remain in the separate uv environment. In particular,
-<code>conda run -n neuroseq python</code> and <code>uv run python</code> can load different packages.
-Updating one does not repair or update the other.</p>
-<p>For a fully independent uv setup, install standalone uv using the link above
-and run it from a shell without Conda activated. If your current uv executable
-is installed inside Conda, install standalone uv before removing that Conda
-environment. An existing project <code>.venv</code> may also use a Conda-provided Python;
-when retiring that Python installation, recreate <code>.venv</code> with a uv-managed
-Python interpreter.</p>
-<p>To identify the environment and Brian2/NumPy versions actually used, run:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys, brian2, numpy; print(sys.executable); print(brian2.__version__, numpy.__version__)&quot;</span>
-</span></code></pre></div>
-<p>For a direct Conda installation, run the same check with
-<code>conda run -n neuroseq python -c "import sys, brian2, numpy; print(sys.executable); print(brian2.__version__, numpy.__version__)"</code>.
-In the application's embedded console, <code>import sys; print(sys.executable)</code>
-identifies the running interpreter. Point your IDE at that same interpreter.</p>
+<p>To upgrade to the latest release, run <code>python -m pip install --upgrade neuroseq</code>.</p>
+<p>For GPU-accelerated cell segmentation, see
+<a href="../../common_issues/#imaging-segmentation">GPU troubleshooting</a>.</p>
+<p>To work on NeuroSeq itself from a repository checkout (with uv or Conda), see the
+<a href="../../developer/developer_installation/">developer installation guide</a>.</p>
 <h2 id="windows-desktop-shortcut">Windows desktop shortcut</h2>
 <p>On Windows, NeuroSeq can instead be installed with a desktop shortcut that
 updates it from GitHub before each start. See

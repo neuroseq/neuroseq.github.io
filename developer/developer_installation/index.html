@@ -948,6 +948,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-uv-from-a-conda-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Using uv from a Conda shell
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#developer-use" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1063,6 +1074,33 @@
     
   
   Project data history
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Making a release
 
     
   </span>
@@ -1241,6 +1279,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-uv-from-a-conda-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Using uv from a Conda shell
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#developer-use" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1292,35 +1341,72 @@ To serve the documentation locally run:</p>
 </span></code></pre></div>
 <p>Open the URL shown in the terminal to see the generated documentation.
 See <a href="../documentation/">Documentation</a> for build checks and deployment details.</p>
+<p><code>uv sync</code> creates a project environment in <code>.venv</code> and installs dependencies
+using <code>pyproject.toml</code> and <code>uv.lock</code>. <code>uv run</code> checks that environment before
+launching a command, so no manual activation of <code>.venv</code> is needed. See
+<a href="https://docs.astral.sh/uv/guides/projects/">uv's project workflow</a>.</p>
+<p>After pulling repository updates, run <code>uv sync</code> again. To deliberately resolve
+newer dependency versions, use <code>uv lock --upgrade</code> followed by <code>uv sync</code> and
+test the result; this changes <code>uv.lock</code>.</p>
 <h2 id="developer-installation-without-uv">Developer Installation without uv</h2>
 <p>Alternatively, if you aren't using uv, then create a new conda environment or virtual environment and activate it.
 Then do an editable install of the package (which means that any changes to the source code will be reflected in the installed package without needing to reinstall),
 and install the pre-commit hooks:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>neuroseq<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>neuroseq
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="w"> </span>--group<span class="w"> </span>dev
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>prek
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>prek<span class="w"> </span>install
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:neuroseq/neuroseq.git
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>neuroseq
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>neuroseq<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>conda<span class="w"> </span>activate<span class="w"> </span>neuroseq
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="w"> </span>--group<span class="w"> </span>dev
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>prek
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>prek<span class="w"> </span>install
 </span></code></pre></div>
 <p>The <code>--group dev</code> option requires a recent pip. This installs directly into
 Conda and does not reproduce <code>uv.lock</code> or uv's package-index configuration.
 If you install uv inside Conda and then use <code>uv sync</code> / <code>uv run</code>, the project
 uses its separate <code>.venv</code> by default. See
-<a href="../../getting_started/installation/#using-uv-from-a-conda-shell">installation and environment selection</a>.</p>
+<a href="#using-uv-from-a-conda-shell">Using uv from a Conda shell</a>.</p>
+<p>Pip does not use <code>uv.lock</code> or <code>[tool.uv.sources]</code>, so this installation can have
+different package versions and PyTorch builds from the uv workflow.</p>
+<h2 id="using-uv-from-a-conda-shell">Using uv from a Conda shell</h2>
+<p>Combining uv and Conda is optional, not a third required setup step. You may
+install uv in an activated Conda environment:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>neuroseq
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>uv
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>uv<span class="w"> </span>sync
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>uv<span class="w"> </span>run<span class="w"> </span>neuroseq
+</span></code></pre></div>
+<p>With the default project configuration, <code>uv run</code> uses the repository's <code>.venv</code>,
+even when Conda is active. Conda supplies the shell/tool installation; the
+application dependencies remain in the separate uv environment. In particular,
+<code>conda run -n neuroseq python</code> and <code>uv run python</code> can load different packages.
+Updating one does not repair or update the other.</p>
+<p>For a fully independent uv setup, install standalone uv using the link above
+and run it from a shell without Conda activated. If your current uv executable
+is installed inside Conda, install standalone uv before removing that Conda
+environment. An existing project <code>.venv</code> may also use a Conda-provided Python;
+when retiring that Python installation, recreate <code>.venv</code> with a uv-managed
+Python interpreter.</p>
+<p>To identify the environment and Brian2/NumPy versions actually used, run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys, brian2, numpy; print(sys.executable); print(brian2.__version__, numpy.__version__)&quot;</span>
+</span></code></pre></div>
+<p>For a direct Conda installation, run the same check with
+<code>conda run -n neuroseq python -c "import sys, brian2, numpy; print(sys.executable); print(brian2.__version__, numpy.__version__)"</code>.
+In the application's embedded console, <code>import sys; print(sys.executable)</code>
+identifies the running interpreter. Point your IDE at that same interpreter.</p>
 <h2 id="developer-use">Developer Use</h2>
 <p>The GUI is launched with:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uv<span class="w"> </span>run<span class="w"> </span>neuroseq
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>uv<span class="w"> </span>run<span class="w"> </span>neuroseq
 </span></code></pre></div>
 <p>(if you are not using uv, just run <code>neuroseq</code>)</p>
 <p>To run with profiling:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>uv<span class="w"> </span>run<span class="w"> </span>neuroseq<span class="w"> </span>--profile<span class="w"> </span>--profile-output<span class="w"> </span>latest.prof
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>uv<span class="w"> </span>run<span class="w"> </span>neuroseq<span class="w"> </span>--profile<span class="w"> </span>--profile-output<span class="w"> </span>latest.prof
 </span></code></pre></div>
 <p>and to see the results:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>snakeviz<span class="w"> </span>latest.prof
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>snakeviz<span class="w"> </span>latest.prof
 </span></code></pre></div>
 <p>To run the test suite:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>uv<span class="w"> </span>run<span class="w"> </span>pytest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>uv<span class="w"> </span>run<span class="w"> </span>pytest
 </span></code></pre></div>
 <p>For the direct Conda installation, use <code>python -m pytest</code> in the activated
 environment, or <code>conda run -n neuroseq python -m pytest</code>. Run application and
