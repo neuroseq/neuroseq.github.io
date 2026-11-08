@@ -4,6 +4,51 @@
         <loc>https://neuroseq.github.io/</loc>
       </url>
       <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/analysis_and_plugins/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/experiments/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/export_patch_clamp_stimuli/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/importing_igor2_waves/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/importing_imaging_data/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/overview/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/simulations_and_experiments/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/static_input_design/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Input%20Design%20and%20Readout%20Analysis/stdp_synaptic_tuning/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Neural%20Networks/brainscales2_delivery/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Neural%20Networks/multiphoton_holographic_stimulation/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Neural%20Networks/overview/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Neural%20Networks/run_external_simulators/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Neural%20Networks/scanimage_acquisition/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/Neural%20Networks/simulations/</loc>
+      </url>
+      <url>
         <loc>https://neuroseq.github.io/common_issues/</loc>
       </url>
       <url>
@@ -40,54 +85,15 @@
         <loc>https://neuroseq.github.io/examples/</loc>
       </url>
       <url>
+        <loc>https://neuroseq.github.io/getting_started/chat_assistant/</loc>
+      </url>
+      <url>
+        <loc>https://neuroseq.github.io/getting_started/gui_overview/</loc>
+      </url>
+      <url>
         <loc>https://neuroseq.github.io/getting_started/installation/</loc>
       </url>
       <url>
         <loc>https://neuroseq.github.io/getting_started/quickstart/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/getting_started/windows_shortcut/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/analysis_and_plugins/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/brainscales2_delivery/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/chat_assistant/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/experiments/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/export_patch_clamp_stimuli/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/gui_overview/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/importing_igor2_waves/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/importing_imaging_data/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/multiphoton_holographic_stimulation/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/run_external_simulators/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/scanimage_acquisition/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/simulations/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/simulations_and_experiments/</loc>
-      </url>
-      <url>
-        <loc>https://neuroseq.github.io/user_guide/stdp_synaptic_tuning/</loc>
       </url>
 </urlset>
