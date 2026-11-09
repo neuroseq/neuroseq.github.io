@@ -1021,6 +1021,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#moved-or-missing-imaging-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Moved or missing imaging files
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#saving-imaging-data" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1621,6 +1632,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#moved-or-missing-imaging-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Moved or missing imaging files
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#saving-imaging-data" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1780,6 +1802,15 @@ channel plays in step with the time slider. Imports through the TIFF pipeline
 start with its channel count and functional channel. The choice is saved per
 imaging data entry. ScanImage recordings use <strong>Functional channel</strong> in the
 <strong>ScanImage (imaging)</strong> tab of the Stimulation setup pane instead.</p>
+<h3 id="moved-or-missing-imaging-files">Moved or missing imaging files</h3>
+<p>A <code>.nseq</code> project does not contain the movie itself, only the path to the
+original imaging file(s); the traces, spikes and segmentation computed from it
+are saved in the project. When the file is not at that path — for example after
+opening the project on another computer — the Imaging tab lists the missing
+file(s) with a <strong>Locate file…</strong> button instead of the video. Choose the file's
+new location and the video plays again; for a movie split across several files,
+pick any one of them and the others are found by name in the same folder. Save
+the project to keep the new path.</p>
 <h3 id="saving-imaging-data">Saving imaging data</h3>
 <p><strong>Save imaging data…</strong> in the Imaging tab first asks which frames to save.
 Frames are counted from 1, as in the time slider tooltip and in Fiji; <strong>Current
@@ -1848,6 +1879,25 @@ directly from one or more 2-photon TIFF stacks. Choose the Cellpose masks
 auto-detection), the pipeline (Suite2p, or a simple ROI average) and the
 acquisition parameters, then <strong>Run pipeline</strong>. The pipeline runs in the
 background; the resulting traces are imported like Suite2p outputs.</p>
+<p>The <strong>Simply average from ROI</strong> pipeline reads the stacks a few frames at a time,
+so a long recording (e.g. 15 minutes of 512×512 frames, about 14 GB) does not
+have to fit in memory. Its options:</p>
+<ul>
+<li><strong>Neuropil correction</strong> also averages an annulus around each ROI, as Suite2p
+  does: the 350 nearest pixels that are more than 2 px from every cell. The
+  annulus times the <strong>Neuropil coefficient</strong> is subtracted from the ROI's trace.</li>
+<li><strong>Compute ΔF/F and deconvolve spikes</strong> imports ΔF/F instead of raw
+  fluorescence. The baseline is Suite2p's sliding maximin (30 s window). ΔF/F is
+  relative to the raw fluorescence baseline, so a dim cell whose
+  neuropil-corrected baseline is near zero does not get a huge ΔF/F. Spikes are
+  deconvolved with OASIS (<strong>Indicator tau</strong>). An event counts as a spike when it
+  reaches <strong>Spike threshold (ΔF/F)</strong>.</li>
+<li><strong>Input artefact suppression</strong> replaces the frames lit by an input array's
+  stimulation with the mean of the clean frames around them. <strong>Imaging started
+  at</strong> is when the first frame was recorded on that input array's time axis: 0
+  if imaging and the input started together, positive if imaging started later,
+  negative if it started first.</li>
+</ul>
 <h2 id="suite2p-calcium-imaging">Suite2p calcium imaging</h2>
 <p><strong>File → Import data → Output → Calcium Imaging (Suite2p outputs)</strong> opens the
 Suite2p importer.</p>
