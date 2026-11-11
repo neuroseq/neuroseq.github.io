@@ -15,7 +15,7 @@
         <link rel="prev" href="../gui_overview/">
       
       
-        <link rel="next" href="../../Neural%20Networks/overview/">
+        <link rel="next" href="../../networks/overview/">
       
       
         
@@ -26,7 +26,7 @@
     
     
       
-        <title>In-App LLM Assistant (Experimental) - NeuroSeq</title>
+        <title>LLM Assistant (Experimental) - NeuroSeq</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              In-App LLM Assistant (Experimental)
+              LLM Assistant (Experimental)
             
           </span>
         </div>
@@ -371,7 +371,7 @@
   <span class="md-ellipsis">
     
   
-  In-App LLM Assistant (Experimental)
+  LLM Assistant (Experimental)
 
     
   </span>
@@ -388,7 +388,7 @@
   <span class="md-ellipsis">
     
   
-  In-App LLM Assistant (Experimental)
+  LLM Assistant (Experimental)
 
     
   </span>
@@ -414,10 +414,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Installation
+        Setup
       </span>
     </span>
   </a>
@@ -425,49 +425,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-a-provider" class="md-nav__link">
+  <a href="#use" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Configuring a provider
+        Use
       </span>
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Configuring a provider">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#codex" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Codex
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#claude-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Claude Code
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-assistant" class="md-nav__link">
+  <a href="#data-scope" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Using the assistant
+        Data scope
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-analysis-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Writing analysis plugins
       </span>
     </span>
   </a>
@@ -527,7 +510,7 @@
   <span class="md-ellipsis">
     
   
-  Neural Networks
+  Networks
 
     
   </span>
@@ -543,7 +526,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  Neural Networks
+  Networks
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -555,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Neural%20Networks/overview/" class="md-nav__link">
+      <a href="../../networks/overview/" class="md-nav__link">
         
   
   
@@ -582,14 +565,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Neural%20Networks/simulations/" class="md-nav__link">
+      <a href="../../networks/simulations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Simulations
+  Digital: Built-in Simulator
 
     
   </span>
@@ -609,14 +592,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Neural%20Networks/run_external_simulators/" class="md-nav__link">
+      <a href="../../networks/external_simulators/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Run External Simulators
+  Digital: External Simulators
 
     
   </span>
@@ -636,14 +619,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Neural%20Networks/scanimage_acquisition/" class="md-nav__link">
+      <a href="../../networks/holographic_stimulation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  ScanImage Acquisition
+  Biological: Holographic Stimulation
 
     
   </span>
@@ -663,14 +646,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Neural%20Networks/multiphoton_holographic_stimulation/" class="md-nav__link">
+      <a href="../../networks/imaging_acquisition/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Multiphoton Holographic Stimulation
+  Biological: Calcium Imaging Acquisition
 
     
   </span>
@@ -690,14 +673,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Neural%20Networks/brainscales2_delivery/" class="md-nav__link">
+      <a href="../../networks/neuromorphic_hardware/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Deliver stimuli to BrainScaleS-2
+  Neuromorphic: Hardware
 
     
   </span>
@@ -743,7 +726,7 @@
   <span class="md-ellipsis">
     
   
-  Input Design and Readout Analysis
+  Input Design
 
     
   </span>
@@ -759,7 +742,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  Input Design and Readout Analysis
+  Input Design
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -771,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/overview/" class="md-nav__link">
+      <a href="../../input_design/overview/" class="md-nav__link">
         
   
   
@@ -797,61 +780,15 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Input Design
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        
-          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-            <label class="md-nav__title" for="__nav_4_2">
-              <span class="md-nav__icon md-icon"></span>
-              
-  
-  Input Design
-
-            </label>
-            <ul class="md-nav__list" data-md-scrollfix>
-              
-                
-                  
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/static_input_design/" class="md-nav__link">
+      <a href="../../input_design/static_input/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Stimulation editor and static input
+  Static Input
 
     
   </span>
@@ -871,14 +808,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/stdp_synaptic_tuning/" class="md-nav__link">
+      <a href="../../input_design/dynamic_input/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Design dynamic input
+  Dynamic Input
 
     
   </span>
@@ -898,14 +835,41 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/export_patch_clamp_stimuli/" class="md-nav__link">
+      <a href="../../input_design/holography_export/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Export stimuli for patch clamp recordings
+  Holography Export
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../input_design/patch_clamp_export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Patch Clamp Export
 
     
   </span>
@@ -925,10 +889,9 @@
     </li>
   
 
-                
-              
-                
-                  
+    
+      
+      
   
   
   
@@ -942,17 +905,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-  Readout Analysis
+  Readout
 
     
   </span>
@@ -963,12 +926,12 @@
           </label>
         
         
-          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-            <label class="md-nav__title" for="__nav_4_3">
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
               
   
-  Readout Analysis
+  Readout
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -980,7 +943,34 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/experiments/" class="md-nav__link">
+      <a href="../../readout/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Overview
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../readout/experiments/" class="md-nav__link">
         
   
   
@@ -1007,14 +997,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/importing_igor2_waves/" class="md-nav__link">
+      <a href="../../readout/imaging_data/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Importing Igor2 Waves
+  Imaging Data
 
     
   </span>
@@ -1034,68 +1024,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/importing_imaging_data/" class="md-nav__link">
+      <a href="../../readout/patch_clamp_data/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Importing Imaging Data
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-                
-              
-                
-                  
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/analysis_and_plugins/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Analysis tools and plugins
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-                
-              
-                
-                  
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Input%20Design%20and%20Readout%20Analysis/simulations_and_experiments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Connecting simulations and experiments
+  Patch-Clamp Data
 
     
   </span>
@@ -1112,6 +1048,105 @@
           </nav>
         
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Data Analysis
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Data Analysis
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_analysis/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Analysis and Plugins
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_analysis/simulations_and_experiments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Simulations vs. Experiments
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1166,10 +1201,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1187,8 +1222,8 @@
           </label>
         
         
-          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-            <label class="md-nav__title" for="__nav_6">
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
               
   
@@ -1211,7 +1246,61 @@
   <span class="md-ellipsis">
     
   
-  Installation and use
+  Installation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contributing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Testing
 
     
   </span>
@@ -1265,7 +1354,7 @@
   <span class="md-ellipsis">
     
   
-  Implementation of Custom Simulators
+  Custom Simulators
 
     
   </span>
@@ -1292,7 +1381,7 @@
   <span class="md-ellipsis">
     
   
-  Analysis plugins
+  Analysis Plugins
 
     
   </span>
@@ -1319,7 +1408,7 @@
   <span class="md-ellipsis">
     
   
-  Project data history
+  Project History
 
     
   </span>
@@ -1346,7 +1435,7 @@
   <span class="md-ellipsis">
     
   
-  Making a release
+  Releases
 
     
   </span>
@@ -1366,68 +1455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer/miscellaneous/" class="md-nav__link">
+      <a href="../../developer/desktop_shortcut/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Miscellaneous
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-                
-              
-                
-                  
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../developer/testing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Testing
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-                
-              
-                
-                  
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../developer/contributing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Contributing
+  Desktop Shortcut
 
     
   </span>
@@ -1454,7 +1489,7 @@
   <span class="md-ellipsis">
     
   
-  Responsible use of AI
+  Responsible Use of AI
 
     
   </span>
@@ -1530,10 +1565,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Installation
+        Setup
       </span>
     </span>
   </a>
@@ -1541,49 +1576,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-a-provider" class="md-nav__link">
+  <a href="#use" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Configuring a provider
+        Use
       </span>
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Configuring a provider">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#codex" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Codex
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#claude-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Claude Code
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-assistant" class="md-nav__link">
+  <a href="#data-scope" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Using the assistant
+        Data scope
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-analysis-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Writing analysis plugins
       </span>
     </span>
   </a>
@@ -1621,162 +1639,125 @@
   
 
 
-<h1 id="in-app-llm-assistance-experimental-feature">In-App LLM Assistance (Experimental feature)</h1>
-<p>NeuroSeq provides an optional chat panel that lets you talk to an LLM about
-the currently loaded project, and availible neuronal sequencer functionality. The assistant has an access to the source code and is given a snapshot of the project state (model, stimuli, experiments) as context and replies in a side
-panel next to the main window.</p>
-<p>The in-app chat assistant is experimental and under active development.
-Behaviour, UI, supported providers, and the project context it receives
-may change without notice.</p>
-<h2 id="installation">Installation</h2>
-<p>The chat panel is included in the standard NeuroSeq installation. Additional
-requirements depend on your chosen provider:</p>
-<ul>
-<li><strong>Codex / Claude Code:</strong> no extra Python packages are needed. Install and sign
-  in to the corresponding CLI as described below.</li>
-<li><strong>OpenAI / Anthropic API / Ollama:</strong> the provider's Python dependencies must be
-  installed. If they are already available in your NeuroSeq environment, no
-  additional installation is needed.</li>
-</ul>
-<p>The optional <code>chat</code> extra installs the dependencies for all three API providers
-(<code>openai</code>, <code>anthropic</code>, and <code>httpx</code>), plus <code>keyring</code> for API key storage.
-Use one of the following commands if you need these packages.</p>
-<p>From the repository directly (requires SSH access to GitHub):</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;neuroseq[chat] @ git+ssh://git@github.com/neuroseq/neuroseq.git&quot;</span>
-</span></code></pre></div>
-<p>From a local checkout:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;.[chat]&quot;</span>
-</span></code></pre></div>
-<h2 id="configuring-a-provider">Configuring a provider</h2>
-<p>Open <strong>Settings → LLM assistant</strong> to choose a provider and model. Five
-backends are bundled:</p>
+<h1 id="llm-assistant-experimental">LLM Assistant (Experimental)</h1>
+<p>An optional chat panel for questions about the loaded project and NeuroSeq.
+It receives the documentation, a fresh project summary with each message, and
+read-only access to project details and the NeuroSeq source. Behaviour and
+supported providers may change.</p>
+<h2 id="setup">Setup</h2>
+<p>Open <strong>Settings → LLM Assistant</strong>, choose a provider and model, then click
+<strong>Test connection</strong> (checks sign-in without sending a prompt).</p>
 <table>
 <thead>
 <tr>
 <th>Provider</th>
-<th>Notes</th>
+<th>Requirements</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Codex (currently preferred)</td>
-<td>Local Codex app-server using your existing Codex sign-in and configuration.</td>
+<td>Codex (local sign-in)</td>
+<td><a href="https://learn.chatgpt.com/docs/codex/cli">Codex CLI</a> and <code>codex login</code>. Recommended.</td>
 </tr>
 <tr>
-<td>Claude Code (currently preferred)</td>
-<td>Local Claude Code CLI using your existing Claude sign-in.</td>
+<td>Claude Code (local sign-in)</td>
+<td><a href="https://code.claude.com/docs/en/setup">Claude Code</a> and <code>claude auth login</code> (subscription, Console account or <code>ANTHROPIC_API_KEY</code>). Recommended.</td>
 </tr>
 <tr>
-<td>Ollama</td>
-<td>Local models served by a running <a href="https://ollama.com">Ollama</a> daemon.</td>
+<td>Ollama (local) (default)</td>
+<td>running <a href="https://ollama.com">Ollama</a> daemon (default <code>http://localhost:11434</code>) and a pulled model (default <code>qwen2.5:7b</code>)</td>
 </tr>
 <tr>
 <td>OpenAI</td>
-<td>OpenAI API, or any OpenAI-compatible endpoint via the base URL field.</td>
+<td>API key; any OpenAI-compatible endpoint via the base URL field</td>
 </tr>
 <tr>
 <td>Anthropic</td>
-<td>Anthropic Claude API.</td>
+<td>API key</td>
 </tr>
 </tbody>
 </table>
-<p>For OpenAI and Anthropic you can paste an API key into the settings dialog.
-Keys are stored in the OS keyring via the <code>keyring</code> package; if no keyring
-backend is available NeuroSeq falls back to the <code>OPENAI_API_KEY</code> /
-<code>ANTHROPIC_API_KEY</code> environment variables.</p>
-<p>For Ollama you only need the base URL of the daemon (default
-<code>http://localhost:11434</code>) and the name of a pulled model.</p>
-<h3 id="codex">Codex</h3>
-<ol>
-<li>Install the <a href="https://learn.chatgpt.com/docs/codex/cli">Codex CLI</a>, then run
-   <code>codex login</code> from a terminal under the same operating-system account as NeuroSeq.</li>
-<li>In <strong>Settings → LLM Assistant</strong>, choose <strong>Codex (local sign-in)</strong>.</li>
-<li>Leave <strong>Codex executable</strong> empty to find <code>codex</code> on PATH, or enter the full
-   executable path. This can also point to the Codex binary bundled with your
-   VS Code extension. Restart NeuroSeq after changing your system PATH.</li>
-<li>Leave <strong>Model</strong> set to <code>default</code> to use your Codex configuration, or use
-   <strong>Refresh</strong> to choose a model. Model access depends on your account and provider.</li>
-<li>Use <strong>Test connection</strong> to check the local app-server and sign-in without
-   sending an inference request. Open <strong>Chat</strong> from the toolbar and ask a question.</li>
-</ol>
-<p>For example: “Where is the stimulation editor implemented?” or “Explain the
-equations and parameters in my current model.” The panel supplies NeuroSeq's
-documentation, a fresh project summary, and the conversation so far. It can
-request project details and source pages through the same inspection protocol
-as the other providers.</p>
-<p>The integration uses the <a href="https://learn.chatgpt.com/docs/app-server">Codex app-server protocol</a>,
-which also supports custom IDE clients. It is a NeuroSeq help panel with streamed
-answers and Stop support. It does not embed the VS Code extension or share its
-open conversation. Each request uses an ephemeral thread with a read-only Codex
-sandbox and no native tool approvals. Your local Codex provider configuration
-and configured tools still apply; the native filesystem sandbox does not confine
-reads to the NeuroSeq source package. Native tool approval requests and interactive
-tool prompts are rejected. This panel does not provide a code-editing review workflow.</p>
-<h3 id="claude-code">Claude Code</h3>
-<ol>
-<li>Install <a href="https://code.claude.com/docs/en/setup">Claude Code</a>, then run
-   <code>claude auth login</code> from a terminal under the same operating-system account as
-   NeuroSeq. A Claude subscription sign-in, a Console account, or an
-   <code>ANTHROPIC_API_KEY</code> in the environment all work.</li>
-<li>In <strong>Settings → LLM Assistant</strong>, choose <strong>Claude Code (local sign-in)</strong>.</li>
-<li>Leave <strong>Claude Code executable</strong> empty to find <code>claude</code> on PATH, or enter the
-   full executable path. Restart NeuroSeq after changing your system PATH.</li>
-<li>Leave <strong>Model</strong> set to <code>default</code> to use your Claude Code configuration, or pick
-   <code>opus</code>, <code>sonnet</code> or <code>haiku</code> (any model name Claude Code accepts also works).
-   Model access depends on your plan.</li>
-<li>Use <strong>Test connection</strong> to check the CLI and sign-in (<code>claude auth status</code>)
-   without sending an inference request.</li>
-</ol>
-<p>Each request runs <code>claude --print</code> once with streamed output. All native
-Claude Code tools, MCP servers, settings files, slash commands and session
-persistence are disabled, and the process runs in an empty temporary directory,
-so the model reaches the project and source only through NeuroSeq's inspection
-protocol below. Stop terminates the process.</p>
-<h2 id="using-the-assistant">Using the assistant</h2>
-<p>Toggle the chat panel from the <strong>Chat</strong> action in the toolbar (robot icon).
-Type a message and press <strong>Enter</strong> or click <strong>Send</strong>; use <strong>Shift+Enter</strong> for a
-new line. Replies stream in token by token. Each
-new message includes a fresh snapshot of the current project so the model
-can answer questions about the loaded simulation and data.</p>
-<p>The assistant can request read-only details from the loaded project: model
-equations, parameters, initial conditions, synapses, monitors, runtime state,
-stimuli, experiments, and imaging metadata. Large arrays are read in pages of
-flattened values, with shape and units supplied where available. It can also
-list and read Python files within the installed <code>neuroseq</code> source package,
-including example projects. This inspection protocol does not expose files
-elsewhere on your computer; see the Codex-specific tool behavior above.</p>
-<p>Requested project data and source text are sent to your selected provider.
-With a hosted provider, this includes the requested experimental data. Reads
-reflect the project at the time of each request. Stop cancels further requests;
-files already saved remain on disk.</p>
-<p>To create an analysis plugin, ask the assistant, for example: "Create an
-analysis plugin that plots the mean trace across selected neurons." Before
-anything is saved, NeuroSeq shows a confirmation dialog with the target path and
-the complete code (or, for an update, a diff against the current file). The file
-is written only if you click <strong>Save plugin</strong>; if you cancel, the assistant is told
-that you declined. Review the code before accepting: tool results can contain
-text from shared project files, so a malicious project could try to steer the
-assistant into proposing harmful code.</p>
-<p>Chat-authored plugins are saved only in your per-user plugin folder (for example
-<code>~/.local/share/neuroseq/analysis_plugins</code> on Linux; override with the
-<code>NEUROSEQ_USER_PLUGIN_DIR</code> environment variable), never in the NeuroSeq package.
-Names starting with <code>_</code> and names of built-in plugins are rejected, and only
-plugins already in your folder can be overwritten. Python syntax is checked
-before saving; this does not verify scientific correctness or runtime behavior.
-Reopen the right-click analysis menu to discover the new plugin. Discovery
-imports the Python code.</p>
+<ul>
+<li>Ollama, OpenAI and Anthropic need the <code>chat</code> extra:
+  <code>pip install "neuroseq[chat]"</code> (installs <code>openai</code>, <code>anthropic</code>, <code>httpx</code>,
+  <code>keyring</code>).</li>
+<li>API keys are stored in the OS keyring. Without a keyring backend, NeuroSeq
+  reads <code>OPENAI_API_KEY</code> / <code>ANTHROPIC_API_KEY</code>.</li>
+<li>Codex and Claude Code: sign in under the same OS account as NeuroSeq. Leave
+  the executable field empty to use <code>PATH</code> (restart NeuroSeq after changing
+  <code>PATH</code>); Codex may also point to the binary bundled with its VS Code
+  extension. Model <code>default</code> uses your CLI configuration; Claude Code also
+  offers <code>opus</code>, <code>sonnet</code>, <code>haiku</code>, Codex lists models via <strong>Refresh</strong>.</li>
+</ul>
+<h2 id="use">Use</h2>
+<p>Toggle <strong>View → Show Chat</strong> (robot icon). <strong>Enter</strong> sends, <strong>Shift+Enter</strong> adds
+a line, <strong>Stop</strong> cancels. Replies stream in.</p>
+<p>The assistant can read model equations, parameters, initial conditions,
+synapses, monitors, runtime state, stimuli, experiments, imaging metadata
+(large arrays in pages) and Python files inside the installed <code>neuroseq</code>
+package. It cannot read other files, run code or run simulations. Anything it
+reads is sent to the provider.</p>
+<h2 id="data-scope">Data scope</h2>
+<p>The <strong>Don't share project data with the provider</strong> checkbox in Settings → LLM
+Assistant limits what the assistant can read:</p>
+<table>
+<thead>
+<tr>
+<th>Checkbox</th>
+<th>Readable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On</td>
+<td>Docs, source, model, parameters, runtime state, neuron count and duration</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>All of the above, plus input arrays, experiments, Cellpose and imaging data and their names</td>
+</tr>
+</tbody>
+</table>
+<p>Each provider keeps its own value. Default: on for OpenAI, Anthropic, Codex
+and Claude Code; off for Ollama, which runs locally. Turn it on for an Ollama
+server on another machine. The chat badge shows "data not shared" while it is
+on.</p>
+<p>The checkbox only limits what NeuroSeq hands to the assistant. Codex keeps its
+own shell, file and MCP tools (it has no single switch that turns them all
+off), and its read-only sandbox can still read any file your user account can,
+including saved projects and recordings. The settings dialog warns about this
+when Codex is selected, and the chat badge then reads "NeuroSeq data not
+shared". To keep project data private, use OpenAI with an API key (or any
+OpenAI-compatible server, such as Azure OpenAI or a local vLLM, set as
+Endpoint), Claude Code (all native tools disabled) or Ollama.</p>
+<p>Earlier replies can contain project data, so the chat clears its history (with
+a short note) when you switch provider or endpoint, or turn the checkbox on.
+Changing only the model keeps the history. Every chat panel, including
+detached ones and other project tabs, switches to the new settings as soon as
+you change them.</p>
+<h2 id="writing-analysis-plugins">Writing analysis plugins</h2>
+<p>Ask e.g. "Create an analysis plugin that plots the mean trace across selected
+neurons." NeuroSeq shows the target path and full code (or a diff) and saves
+only after you click <strong>Save plugin</strong>. Review the code: a shared project could
+contain text that steers the assistant towards harmful code.</p>
+<ul>
+<li>Saved only to the per-user plugin folder (Linux:
+  <code>~/.local/share/neuroseq/analysis_plugins</code>, override with
+  <code>NEUROSEQ_USER_PLUGIN_DIR</code>), never into the package.</li>
+<li>Names starting with <code>_</code> or matching built-in plugins are rejected; only
+  plugins already in your folder can be overwritten.</li>
+<li>Syntax is checked, correctness is not. Reopen the right-click analysis menu
+  to load the plugin (this imports its code).</li>
+</ul>
 <h2 id="limitations">Limitations</h2>
 <ul>
-<li>Project and source access is read-only except for Python files in the analysis
-  plugin folder. NeuroSeq's inspection protocol cannot directly execute Python
-  or run simulations. Codex's configured native tools have their own sandbox policy.</li>
-<li>Inspection uses a JSON request protocol supported by all five backends;
-  reliability depends on the model following that protocol. Each turn allows
-  up to 12 read/write requests; ask a follow-up to continue. Data is read on demand rather
-  than sending the entire project and source tree in every prompt.</li>
-<li>Conversations are not persisted across sessions.</li>
-<li>Provider availability, model lists, and rate limits depend entirely on
-  the chosen backend.</li>
+<li>Up to 12 read/write requests per turn; ask a follow-up to continue.
+  Reliability depends on the model following NeuroSeq's JSON request protocol.</li>
+<li>Conversations are not saved between sessions.</li>
+<li>Codex runs each request in an ephemeral read-only sandbox, but your configured
+  Codex tools still apply and its filesystem sandbox is not limited to the
+  NeuroSeq package. Claude Code runs <code>claude --print</code> in an empty temporary
+  directory with all native tools, MCP servers and settings disabled.</li>
 </ul>
 
 
@@ -1833,7 +1814,9 @@ imports the Python code.</p>
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.copy"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+          
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.copy"],"redirect":"../../redirect.json","search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
