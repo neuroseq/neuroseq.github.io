@@ -495,6 +495,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Terminology
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-substrates" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1543,6 +1554,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Terminology
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-substrates" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1605,6 +1627,22 @@ the same analysis run on every substrate.</p>
 <p>Input arrays have one row per neuron. On biological networks, neuron ID matching
 links each row to a real cell through a Cellpose segmentation
 (<strong>File → Cell segmentation</strong>, <em>ID Mapping Options</em>).</p>
+<h2 id="terminology">Terminology</h2>
+<ul>
+<li><strong>Import</strong>: loading files of any kind into a project. <strong>File → Import data</strong>
+  has an <strong>Input</strong> submenu (e.g. SysCon2 <code>.seq</code>, patch-clamp command waveforms)
+  and an <strong>Output</strong> submenu (calcium imaging, patch-clamp recordings).</li>
+<li><strong>Input</strong>: the arrays that drive the network, one row per neuron (input
+  arrays, shown in the <strong>Input</strong> panel and chosen with the <strong>Input data</strong>
+  selector). They are designed with static or dynamic input design and
+  imported or exported as files.</li>
+<li><strong>Output</strong>: what is read out from the network: traces, spikes and synapses,
+  simulated or recorded (selected with <strong>Neuron data</strong>, <strong>Spike data</strong>,
+  <strong>Synapse data</strong>).</li>
+<li><strong>Stimulation</strong>: the physical delivery of input on a rig, e.g. holographic
+  optogenetic stimulation through SysCon2, configured in the <strong>Stimulation
+  setup</strong> pane. A stimulation artefact is laser light picked up by the imaging.</li>
+</ul>
 <h2 id="supported-substrates">Supported substrates</h2>
 <p>These are the integrations in use today. They are starting points for new
 substrates, third-party software and APIs rather than a fixed list.</p>

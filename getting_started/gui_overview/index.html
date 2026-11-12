@@ -467,13 +467,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparing-trace-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comparing trace arrays
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#stimulation-editor" class="md-nav__link">
+  <a href="#input-editor" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Stimulation editor
+        Input editor
       </span>
     </span>
   </a>
@@ -1750,13 +1767,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparing-trace-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comparing trace arrays
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#stimulation-editor" class="md-nav__link">
+  <a href="#input-editor" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Stimulation editor
+        Input editor
       </span>
     </span>
   </a>
@@ -1935,7 +1969,7 @@ at a time across all tabs.</p>
 </tr>
 <tr>
 <td>Export → Patch Clamp Input</td>
-<td>stimulus for SutterPatch (<a href="../../input_design/patch_clamp_export/">patch clamp export</a>)</td>
+<td>input for SutterPatch (<a href="../../input_design/patch_clamp_export/">patch clamp export</a>)</td>
 </tr>
 <tr>
 <td>Export → Optogenetic Input</td>
@@ -1951,7 +1985,12 @@ at a time across all tabs.</p>
 counted per bin; the bin defaults to the frame period of a trace in the same
 data group, else 1 ms. <code>.npy</code> holds only the array; <code>.npz</code> also holds
 <code>neuron_ids</code>, <code>times</code> (s) and <code>units</code>, with the array as <code>values</code>.</p>
-<p><strong>File → Manage Data</strong> lists data groups and deletes them.</p>
+<p><strong>File → Manage Data</strong> lists data groups and their data sets to rename,
+describe or delete them.</p>
+<p>The file dialogs of the data imports (cell segmentation, calcium imaging,
+Suite2p, patch clamp, SysCon2) open in the folder that project used last, so
+each open project tab keeps its own folder. A project that has none yet starts
+in the folder used last in any project. The folder is saved with the project.</p>
 <h3 id="dropping-files">Dropping files</h3>
 <p>Dropped files open their usual import dialog, prefilled:</p>
 <table>
@@ -1986,7 +2025,7 @@ data group, else 1 ms. <code>.npy</code> holds only the array; <code>.npz</code>
 <tr>
 <td>TIFF or PNG</td>
 <td>Cell segmentation tab</td>
-<td>asks for the Cellpose model, then segments</td>
+<td>cell segmentation, file ready to segment</td>
 </tr>
 <tr>
 <td>TIFF</td>
@@ -2013,14 +2052,22 @@ data group, else 1 ms. <code>.npy</code> holds only the array; <code>.npz</code>
 <li>Open and save run in the background with a cancellable progress dialog.
   Cancelling a save leaves the original file untouched.</li>
 <li>Undo (<code>Ctrl+Z</code>) / Redo (<code>Ctrl+Shift+Z</code>) cover input-array edits, imports and
-  deletions in Manage Data. History is per tab and not saved in the file.</li>
+  renames, descriptions and deletions in Manage Data. History is per tab and not saved in the file.</li>
 </ul>
 <h2 id="data-toolbar">Data toolbar</h2>
 <p>Comboboxes select what each panel shows: <strong>Input data</strong>, <strong>Neuron data</strong>,
 <strong>Spike data</strong>, <strong>Synapse data</strong> and <strong>All data</strong> (a universal panel for any
 traces or spikes). The button next to Input data opens array operations:
 create, edit, delete, clear, Trim to Mapped Neurons…, pad, trim, loop.
-<strong>Overlay input on traces</strong> draws the input on the trace panel.</p>
+<strong>Overlay input on traces</strong> draws the selected input array behind the Neuron
+data traces (each neuron's input on its own trace row) and hides the input
+editor. <strong>Overlay input on All data traces</strong>, next to the All data selector,
+does the same for the All data panel when it shows traces, for example a second
+calcium trace array, and leaves the input editor where it is. Each trace view,
+including detached panels, switches its overlay on and off on its own:
+right-click the traces and choose <strong>Overlay input on traces</strong>. A detached copy
+starts with the setting of the panel it was copied from. Every overlay follows
+the Input data selector and redraws after input edits, undo and redo.</p>
 <p>The View toolbar also holds <strong>Design static input</strong>, <strong>Design dynamic input</strong>
 (<a href="../../input_design/overview/">input design</a>), <strong>Image acquisition</strong> (ScanImage
 controls) and the Imaging tab's data selector.</p>
@@ -2029,14 +2076,66 @@ controls) and the Imaging tab's data selector.</p>
 <li>Pan: scrollbars, mouse wheel (vertical) or middle-button drag. Panels are
   linked by default.</li>
 <li>Zoom: <strong>+</strong>/<strong>−</strong> buttons, <code>Ctrl</code>+wheel (time), <code>Shift</code>+wheel (neurons).</li>
-<li><strong>Toggle Selection Text</strong> hides the coordinate label at the cursor.</li>
+<li><strong>Toggle Selection Text</strong> hides the coordinate label at the cursor. The label
+  shows the neuron and its value at the cursor time (traces: the nearest
+  sample, with that sample's time). Times on the axis, the label and selections
+  use seconds when 2 s or more are visible and milliseconds otherwise, with more
+  decimals the further you zoom in.</li>
 <li><strong>Toggle Grid</strong> shows a time/neuron grid on the input editor, spaced by the
   array's <code>dt</code>.</li>
 <li>Right-click the traces for <strong>Normalization…</strong> (percent scale, Center median,
-  Clip values, Auto-extend vertical space) and <strong>Preview vector graphic…</strong>.
+  Clip values, Auto-extend vertical space), <strong>Overlay input on traces</strong> and
+  <strong>Preview vector graphic…</strong>.
   The synapse heatmap has its own <strong>Normalization…</strong>.</li>
 </ul>
-<h2 id="stimulation-editor">Stimulation editor</h2>
+<h3 id="comparing-trace-arrays">Comparing trace arrays</h3>
+<p>Repeats of the same input give several trace arrays. To compare them
+without switching the Neuron data selector back and forth, right-click the
+traces and choose <strong>Compare traces…</strong>:</p>
+<ul>
+<li>Tick any number of <strong>Neurons</strong>. The selected neuron range (or the neuron
+  under the cursor) is ticked already. Filter the list by id or range
+  (<code>10-20</code>); <strong>Select all</strong>/<strong>Select none</strong> act on the neurons the filter
+  shows, and the field below ticks a list such as <code>0-5, 9</code>.</li>
+<li>Tick the <strong>Trace arrays</strong> to compare. Every trace array of the project is
+  listed; the one the trace view shows is ticked. Drag the arrays, or use
+  <strong>Up</strong>/<strong>Down</strong>, to set their order (it matters for <strong>Concatenated</strong>).</li>
+<li>Choose a <strong>View</strong>:</li>
+<li><strong>Overlay per neuron</strong>: one row per neuron, overlaying that neuron's
+    trace from every chosen array, each array in its own colour as named in
+    the legend.</li>
+<li><strong>Side by side per neuron</strong>: the same rows, but every array gets its own
+    column. The window's <strong>Side by side</strong> box switches between these two.</li>
+<li><strong>Separate window per array</strong>: one window per array, each showing the
+    chosen neurons stacked one row per neuron. With <strong>Lock time axis</strong> (on by
+    default), zooming or panning time in one window moves every other locked
+    window; <strong>Lock value axis</strong> (off by default) does the same for each
+    neuron's value range. Every window has its own lock boxes, so you can
+    unlink a window later (ticking a box again snaps it back to the others).
+    The windows open fanned out so they don't cover each other completely;
+    closing one leaves the others linked.</li>
+<li><strong>Concatenated</strong>: the arrays joined end to end, in the list's order, into
+    one long timeline per neuron. Each segment is drawn in its array's
+    colour on its own sampling interval, starting where the previous one
+    ended (plus the optional <strong>Gap</strong>). Dashed lines mark the boundaries and
+    the array names label the segments.</li>
+</ul>
+<p><strong>OK</strong> opens the window(s); you can keep several open. All rows of a window
+share one time axis, so zooming or panning one (toolbar above the plot) moves
+them all. Each array is drawn on its own time axis, so arrays with a different
+sampling interval or length still line up in time. A neuron missing from an
+array is skipped there (left empty in the concatenated view), and a note at
+the top lists which. The windows only read the data: they change nothing in
+the project and add no undo step.</p>
+<p>The one exception is <strong>Also add as new trace array to the project</strong> under
+<strong>Concatenated</strong>. It stores the joined traces of the ticked neurons as a new
+data group, named in the <strong>Name</strong> field (<code>Concatenated: Rep 1 + Rep 2 + …</code> by
+default), which then appears in the data selectors. Neurons missing from an
+array and the gap are filled with NaN. Adding is one undo step (Undo removes
+the array again). It is only offered when every ticked array has the same
+sampling interval; otherwise the box is disabled and its tooltip lists the
+arrays' intervals.</p>
+<h2 id="input-editor">Input editor</h2>
 <p>The left toolbar has Undo/Redo, <strong>Draw mode</strong> (<code>1</code>) and <strong>Select mode</strong> (<code>2</code>).</p>
 <ul>
 <li>Draw mode: left-click draws, right-click erases (inverted in <strong>Erase input</strong>).
@@ -2048,7 +2147,8 @@ controls) and the Imaging tab's data selector.</p>
 </ul>
 <p>Details: <a href="../../input_design/static_input/">static input</a>.</p>
 <h2 id="cell-segmentation-and-imaging-tabs">Cell segmentation and Imaging tabs</h2>
-<p>The <strong>Cell segmentation</strong> tab shows Cellpose cells labelled with neuron ids:</p>
+<p>The <strong>Cell segmentation</strong> tab shows Cellpose cells labelled with neuron ids,
+each in the same colour as that neuron's traces, spikes and inputs:</p>
 <ul>
 <li>Left click: select or deselect a cell. Traces, inputs and spikes then show
   only selected neurons.</li>
@@ -2084,7 +2184,7 @@ window</strong> is checked. See <a href="../../data_analysis/analysis/">analysis
 </tr>
 <tr>
 <td>Input Automatic Padding</td>
-<td>default duration (s) for new input arrays and the Pad dialog (default 0)</td>
+<td>seconds of empty input added after each run (default 0)</td>
 </tr>
 <tr>
 <td>LLM Assistant</td>

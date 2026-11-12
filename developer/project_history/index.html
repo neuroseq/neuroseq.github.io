@@ -1597,10 +1597,10 @@
 
 <h1 id="project-undo-and-redo">Project undo and redo</h1>
 <p><code>src/neuroseq/project_history.py</code> holds the Qt-free <code>ProjectHistory</code> and
-<code>ProjectCommand</code>. Each <code>Project</code> owns one <code>history</code>, shared by all its stimulus
+<code>ProjectCommand</code>. Each <code>Project</code> owns one <code>history</code>, shared by all its input
 arrays and experiments, so undo follows chronological order across them.</p>
 <h2 id="what-is-recorded">What is recorded</h2>
-<p>Stimulus value edits, generated patterns, padding and trimming, and experiment
+<p>Input value edits, generated patterns, padding and trimming, and experiment
 additions, appends, replacements and deletions (deleting several groups is one
 command). Redo reuses retained data and never repeats a file import.</p>
 <p>These clear the history, because older commands could reference obsolete names

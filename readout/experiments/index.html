@@ -1601,9 +1601,22 @@
 <strong>Neuron data</strong>, <strong>Spike data</strong>, <strong>Synapse data</strong> and <strong>All data</strong> selectors of
 the Data toolbar.</p>
 <h2 id="manage-data">Manage Data</h2>
-<p><strong>File → Manage Data</strong> lists every data group with its duration, data sets and
-details (neurons, spikes, matrix size). <strong>Delete Selected</strong> removes groups and
-all their data.</p>
+<p><strong>File → Manage Data</strong> lists every data group with its duration, description
+and data sets. Expand a group to see its data sets (traces, spikes, synapses)
+with their details (neurons, spikes, matrix size).</p>
+<ul>
+<li><strong>Rename</strong> (or double-click a name) renames a data group or a single data
+  set. The new name appears in the Data toolbar selectors as <code>group :: data
+set</code>. Names must be unique (data sets: per kind within the group) and
+  cannot contain <code>::</code>.</li>
+<li><strong>Edit Description</strong> (or double-click the Description column) stores a free
+  note on a data group, for example the slice or field of view.</li>
+<li><strong>Delete Selected</strong> removes the selected data sets only, or, for a selected
+  group, the whole group with all its data. Input arrays are never deleted
+  here.</li>
+</ul>
+<p>Renames, descriptions and deletions are undoable (<code>Ctrl+Z</code>) and saved in the
+project file.</p>
 <h2 id="generate-synthetic-data">Generate synthetic data</h2>
 <p><strong>File → Generate Synthetic Data...</strong> (<code>Ctrl+G</code>) creates test traces for
 prototyping analyses. Each group has <strong>Export as a file</strong> and <strong>Add to the

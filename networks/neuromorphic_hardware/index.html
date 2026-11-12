@@ -1792,7 +1792,7 @@ request</code>. <strong>Refresh</strong> also downloads the EBRAINS setup list. 
 <p><strong>Neurons</strong> (<em>auto</em>: one per input row) and <strong>Max neurons</strong> (512, one chip).
 Row <code>i</code> drives hardware neuron <code>i</code>; extra rows are dropped and missing ones get
 no input, with a warning. A single-row array drives every neuron.</p>
-<p><strong>Constant current (stim array)</strong> (default). The array is split into segments
+<p><strong>Constant current (input array)</strong> (default). The array is split into segments
 where any row changes value. Each segment is a separate hardware run starting
 from rest (chained runs did not work on the chip), with</p>
 <p><code>constant_current_i_offset = round(clip(value / Stim value at max, 0, 1) × Max i_offset)</code></p>
@@ -1802,7 +1802,7 @@ from rest (chained runs did not work on the chip), with</p>
 <p><strong>Spike input.</strong> A <code>SpikeSourceArray</code> (one source per neuron) with one-to-one
 excitatory synapses of <strong>Weight</strong> 63 (0-63). <strong>Spike source</strong>:</p>
 <ul>
-<li><strong>From stim array (threshold)</strong>: sample the array every <strong>Event interval</strong>
+<li><strong>From input array (threshold)</strong>: sample the array every <strong>Event interval</strong>
   (20 ms biological) and spike where it exceeds <strong>Threshold</strong> (0).</li>
 <li><strong>From project spike data</strong>: a spike dataset from a data group; neuron <code>i</code>
   drives hardware neuron <code>i</code>.</li>
@@ -1814,7 +1814,7 @@ excitatory synapses of <strong>Weight</strong> 63 (0-63). <strong>Spike source</
 <li>biological s = hardware ms / 1000 × speed-up.</li>
 </ul>
 <h2 id="delivery-and-readback">Delivery and readback</h2>
-<p><strong>Deliver current stim array</strong> shows a summary and asks for confirmation.
+<p><strong>Deliver current input array</strong> shows a summary and asks for confirmation.
 Neurons are <code>HXNeuron</code>s with the chip's nightly calibration. The result is a
 data group <code>BSS-2 &lt;stim name&gt; &lt;date time&gt;</code> (undoable) with:</p>
 <ul>

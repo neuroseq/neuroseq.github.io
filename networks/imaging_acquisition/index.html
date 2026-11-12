@@ -1783,10 +1783,10 @@ acquisition</strong> lists all imaging data (<strong>Import Imaging Data</strong
 data</strong> act on the list).</p>
 <p>Files beside each TIFF, written before the hardware command:</p>
 <ul>
-<li><code>&lt;date&gt;_&lt;number&gt;.json</code>: request, stimulus (name, <code>dt</code>, shape, SHA-256),
+<li><code>&lt;date&gt;_&lt;number&gt;.json</code>: request, input array (name, <code>dt</code>, shape, SHA-256),
   routine block (<code>.seq</code> path, SysCon2 entry) and export settings. It records the
   request, not proof of completion.</li>
-<li><code>&lt;date&gt;_&lt;number&gt;_stimulus.npy</code>: the stimulus samples.</li>
+<li><code>&lt;date&gt;_&lt;number&gt;_stimulus.npy</code>: the input array samples.</li>
 </ul>
 <p>The <code>.nseq</code> stores only metadata and a frame index; keep the TIFFs at their
 paths. <strong>Save imaging data…</strong> exports a rendered copy, not the original. GIF
@@ -1810,7 +1810,7 @@ ScanImage</strong>, rheobase and STDP window blocks run without manual steps:</p
 <li>Arm ScanImage to wait for the external trigger, for the block plus
    <strong>Record after block</strong> (default 3 s).</li>
 <li>Run the sequence (start condition <em>auto</em>); its TTL must trigger ScanImage.</li>
-<li>Extract ΔF/F per Cellpose ROI (F0 = mean before the block's first stimulus)
+<li>Extract ΔF/F per Cellpose ROI (F0 = mean before the block's first input)
    and deconvolve it with OASIS (jGCaMP8m, 0.5 s decay; events of at least
    <strong>Spike threshold</strong> are spikes). Options:</li>
 <li><strong>Remove stimulation artefact</strong> (default on): frames lit by the laser are

@@ -1648,7 +1648,7 @@ editor tools and the static input designer.</p>
 </tr>
 <tr>
 <td>Pad input array</td>
-<td>Add time (seconds, prefilled 5 s, then the last value) to the end of all input arrays.</td>
+<td>Add time to the end of all input arrays: either <strong>Seconds to add</strong> (prefilled 5 s, then the last value) or <strong>Pad to end time</strong>, the time point (s) the arrays should end at; the difference is added. An end time before the current end is refused (use Trim), and so is an amount that adds less than half a sample (nothing to pad).</td>
 </tr>
 <tr>
 <td>Trim input array</td>
@@ -1741,8 +1741,12 @@ a generated pattern into the selected input array.</p>
 <td>All neurons in scope fire together with the same magnitude.</td>
 </tr>
 <tr>
+<td>Constant</td>
+<td>Shown instead of Sequential and Simultaneous when the scope is a single neuron (see below).</td>
+</tr>
+<tr>
 <td>Linear gradient</td>
-<td>Like Simultaneous, but magnitude steps linearly from first to last pulse.</td>
+<td>Like Simultaneous, but magnitude (and optionally pulse duration) steps from first to last pulse.</td>
 </tr>
 <tr>
 <td>Ramp</td>
@@ -1756,16 +1760,27 @@ a generated pattern into the selected input array.</p>
 </table>
 <ul>
 <li><strong>Scope</strong>: <strong>All neurons</strong>, or <strong>Specific neurons</strong> given as indices and
-  ranges (<code>0, 2, 5-8</code>). Other neurons are left untouched.</li>
+  ranges (<code>0, 2, 5-8</code>). Other neurons are left untouched. When the scope is a
+  single neuron (one index, or <strong>All neurons</strong> of a one-neuron network),
+  Sequential and Simultaneous would write the same pulses, so the two are
+  replaced by one <strong>Constant</strong> pattern. The list updates while you type the
+  indices; widening the scope again brings Sequential back if it was chosen.</li>
 <li><strong>Pulse duration</strong> and <strong>Inter-pulse interval</strong> (ms), or <strong>Ramp duration</strong>
   and <strong>Interval between ramps</strong> for Ramp.</li>
 <li><strong>Magnitude</strong>, <strong>First/Last pulse magnitude</strong> (Linear gradient) or
   <strong>Start/End magnitude</strong> (Ramp).</li>
+<li><strong>Pulse duration: Step from first to last pulse</strong> (Linear gradient): the
+  pulse duration also steps linearly, from <strong>First pulse duration</strong> to <strong>Last
+  pulse duration</strong> (ms), each rounded to whole samples. The inter-pulse
+  interval stays the same.</li>
 <li>Repeat count (named per pattern) and <strong>Start time (ms)</strong>.</li>
 </ul>
 <p><strong>Apply</strong> writes the pattern and moves <strong>Start time</strong> to its end, so repeated
 clicks append patterns one after another. <strong>Reset start time</strong> returns to 0.
 The window stays open until <strong>Close</strong>.</p>
+<p>The designer keeps its values per input array: a newly created (or newly
+selected) array starts from the default values, and an array you return to
+shows the values last entered for it, including its start time.</p>
 <p>For closed-loop input, see <a href="../dynamic_input/">Dynamic input</a>.</p>
 
 

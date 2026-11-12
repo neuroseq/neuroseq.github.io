@@ -1575,7 +1575,7 @@
 
 <h1 id="custom-simulators">Custom simulators</h1>
 <p>Any network (a simulator, a neuromorphic chip, a remote rig) can act as a
-NeuroSeq backend: it receives the stimulus arrays and returns an <code>Experiment</code>.
+NeuroSeq backend: it receives the input arrays and returns an <code>Experiment</code>.
 Write it as a standalone Python file so it needs no core changes. Using one from
 the GUI is described in <a href="../../networks/external_simulators/">Run external simulators</a>.</p>
 <h2 id="the-simulate-contract">The <code>simulate</code> contract</h2>
@@ -1642,7 +1642,7 @@ and cumulative time; the subclass owns the runtime objects.</p>
 </tr>
 <tr>
 <td><code>migrate_project(project)</code> (optional)</td>
-<td>Upgrades legacy stimulus formats after an archive loads</td>
+<td>Upgrades legacy input formats after an archive loads</td>
 </tr>
 </tbody>
 </table>
